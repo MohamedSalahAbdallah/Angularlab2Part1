@@ -1,14 +1,13 @@
 <nav class="navbar navbar-dark bg-dark justify-content-between">
-  <a class="navbar-brand">Navbar</a>
+  <a class="navbar-brand m-2">Navbar</a>
   <form class="form-inline w-50">
     <input
       class="form-control mr-sm-2 w-75 d-inline-block"
       type="search"
       placeholder="Search"
       aria-label="Search"
+      (input)="search($event)"
     />
-    <button class="btn btn-outline-success my-2 my-sm-0 m-2" type="submit">
-      Search
-    </button>
+    <button class="btn btn-outline-success my-2 my-sm-0 m-2">reset</button>
   </form>
 </nav>

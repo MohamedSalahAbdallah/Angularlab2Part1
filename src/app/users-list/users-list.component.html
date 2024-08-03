@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+    @for (item of usersList; track $index) {
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            <img [src]="item.image" alt="" />
+          </h5>
+          <p class="card-text"></p>
+          <div>
+            {{ item.username }}
+
+            @switch (item.role) { @case ("admin") {
+            <div class="bg-danger badge" style="margin: auto">
+              {{ item.role }}
+            </div>
+            } @case ("user") {
+            <div class="bg-success badge" style="margin: auto">
+              {{ item.role }}
+            </div>
+            } @case ("moderator") {
+            <div class="bg-warning badge" style="margin: auto">
+              {{ item.role }}
+            </div>
+            } }
+          </div>
+          <div>{{ item.email }}</div>
+          <div>{{ item.phone }}</div>
+          <div>
+            {{ item.birthDate | date : "mediumDate" }}
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</div>

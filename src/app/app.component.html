@@ -1,1 +1,2 @@
-<app-search></app-search>
+<app-search (result)="onSearchResult($event)"></app-search>
+<app-users-list [usersList]="filteredUsersList"></app-users-list>
